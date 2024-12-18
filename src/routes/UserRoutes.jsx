@@ -7,7 +7,7 @@ import ProductsPage from "../pages/user/ProductsPage";
 import ProductInfo from "../pages/user/ProductInfoPage";
 import CartPage from "../pages/user/CartPage";
 import WishListPage from "../pages/user/WishListPage";
-import RequireAuth from "../redux/protect/requireAuth";
+import RequireAuth from "../redux/protect/RequireAuth";
 import RequireAuthLogin from "../redux/protect/RequireAuthLogin";
 import ProfilePage from "../pages/user/ProfilePage";
 import UpdateProfile from "../components/user/UpdateProfile";
