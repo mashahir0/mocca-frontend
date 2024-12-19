@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Initialize axios instance
 const api = axios.create({
-  baseURL: "https://moccafashion.shop/admin",
+  baseURL: "https://www.moccafashion.shop/admin",
 });
 
 // Helper function to get tokens
