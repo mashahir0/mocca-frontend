@@ -289,6 +289,7 @@ const ProductsList = () => {
                       src={product.mainImage?.[0] || "default-image.jpg"}
                       alt={product.productName}
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                      onClick={() => navigate(`/productinfo/${product._id}`)}
                     />
                     <button
                       onClick={() => toggleWishlist(product._id)}
@@ -328,7 +329,7 @@ const ProductsList = () => {
                     <div className="flex items-center mb-2">
                       {renderStars(product.averageRating)}
                       <span className="text-gray-600 text-sm ml-1">
-                        ({product.averageRating || 0})
+                        ({Math.floor(product.averageRating) || 0})
                       </span>
                     </div>
                     <div className="flex items-center justify-between">
@@ -355,13 +356,13 @@ const ProductsList = () => {
                           ₹{Math.floor(product.salePrice)}
                         </span>
                       )}
-                      <a
+                      {/* <a
                         href="#"
                         className="text-sm text-blue-600 hover:underline"
                         onClick={() => navigate(`/productinfo/${product._id}`)}
                       >
                         View Details
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                 </div>
