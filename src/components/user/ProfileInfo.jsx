@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { useQuery } from "@tanstack/react-query";
 import axios from "../../services/api/userApi";
 import Loading from "../common/Loading";
+import Error from "../common/Error";
 
 export default function ProfileInfo() {
   const { user } = useSelector((state) => state.user);

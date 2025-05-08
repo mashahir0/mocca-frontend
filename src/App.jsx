@@ -8,6 +8,8 @@ import { store, persistor } from "./redux/store/Store";
 import { PersistGate } from "redux-persist/integration/react";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import { SearchProvider } from "../utils/SearchContext";
+import ErrorBoundary from "./components/common/ErrorBoundary";
+import ErrorFallback from "./components/common/ErrorFallback";
 const queryClient = new QueryClient();
 function App() {
   const routes = [...UserRoutes, ...adminRoutes];
@@ -19,7 +21,11 @@ function App() {
           <Provider store={store}>
             <PersistGate loading={null} persistor={persistor}>
               <QueryClientProvider client={queryClient}>
-                <RouterProvider router={router} />
+                <ErrorBoundary fallback={({ error, resetErrorBoundary }) => (
+                  <ErrorFallback error={error} resetErrorBoundary={resetErrorBoundary} />
+                )}>
+                  <RouterProvider router={router} />
+                </ErrorBoundary>
               </QueryClientProvider>
             </PersistGate>
           </Provider>

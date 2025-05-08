@@ -23,11 +23,13 @@ import OrderSuccessPage from "../pages/user/OrderSuccessPage";
 import CartPlaceOrderPage from "../pages/user/CartPlaceOrderPage";
 import WalletPage from "../pages/user/WalletPage";
 import AboutUsPage from "../pages/user/AboutUsPage";
+import ErrorFallback from "../components/common/ErrorFallback";
 
 const UserRoutes = [
   {
     path: "/",
     element: <Navigate to="/home" />,
+    errorElement: <ErrorFallback />
   },
   {
     path: "/login",
@@ -36,6 +38,7 @@ const UserRoutes = [
         <UserLoginPage />
       </RequireAuthLogin>
     ),
+    errorElement: <ErrorFallback />
   },
   {
     path: "/register",
@@ -44,22 +47,27 @@ const UserRoutes = [
         <UserRegPage />
       </RequireAuthLogin>
     ),
+    errorElement: <ErrorFallback />
   },
   {
     path: "/forgotpass",
     element: <ForgotPage />,
+    errorElement: <ErrorFallback />
   },
   {
     path: "/home",
     element: <HomePage />,
+    errorElement: <ErrorFallback />
   },
   {
     path: "/products",
     element: <ProductsPage />,
+    errorElement: <ErrorFallback />
   },
   {
     path: "/productinfo/:id",
     element: <ProductInfo />,
+    errorElement: <ErrorFallback />
   },
   {
     path: "/cart",
@@ -68,6 +76,7 @@ const UserRoutes = [
         <CartPage />
       </RequireAuth>
     ),
+    errorElement: <ErrorFallback />
   },
   {
     path: "/wishlist",
@@ -76,6 +85,7 @@ const UserRoutes = [
         <WishListPage />
       </RequireAuth>
     ),
+    errorElement: <ErrorFallback />
   },
   {
     path: "/profile",
@@ -84,6 +94,7 @@ const UserRoutes = [
         <ProfilePage />
       </RequireAuth>
     ),
+    errorElement: <ErrorFallback />
   },
   {
     path: "/edit-profile",
@@ -92,6 +103,7 @@ const UserRoutes = [
         <UpdateProfilePage />
       </RequireAuth>
     ),
+    errorElement: <ErrorFallback />
   },
   {
     path: "/change-password",
@@ -100,6 +112,7 @@ const UserRoutes = [
         <ChangePassPage />
       </RequireAuth>
     ),
+    errorElement: <ErrorFallback />
   },
   {
     path: "/address-managment",
@@ -108,6 +121,7 @@ const UserRoutes = [
         <AddressIfoPage />
       </RequireAuth>
     ),
+    errorElement: <ErrorFallback />
   },
   {
     path: "/add-address",
@@ -116,6 +130,7 @@ const UserRoutes = [
         <AddAddressPage />
       </RequireAuth>
     ),
+    errorElement: <ErrorFallback />
   },
   {
     path: "/edit-address",
@@ -124,6 +139,7 @@ const UserRoutes = [
         <EditAddressPage />
       </RequireAuth>
     ),
+    errorElement: <ErrorFallback />
   },
   {
     path: "/orders-list",
@@ -132,6 +148,7 @@ const UserRoutes = [
         <OrderListPage />
       </RequireAuth>
     ),
+    errorElement: <ErrorFallback />
   },
   {
     path: "/order-detail-view/:id",
@@ -140,6 +157,7 @@ const UserRoutes = [
         <OrderDetailViewPage />
       </RequireAuth>
     ),
+    errorElement: <ErrorFallback />
   },
   {
     path: "/place-order/:id/:size/:quantity",
@@ -148,6 +166,7 @@ const UserRoutes = [
         <PlaceOrderPage />
       </RequireAuth>
     ),
+    errorElement: <ErrorFallback />
   },
   {
     path: "/order-confirmation",
@@ -156,6 +175,7 @@ const UserRoutes = [
         <OrderSuccessPage />
       </RequireAuth>
     ),
+    errorElement: <ErrorFallback />
   },
   {
     path: "/place-order-cart",
@@ -164,6 +184,7 @@ const UserRoutes = [
         <CartPlaceOrderPage />
       </RequireAuth>
     ),
+    errorElement: <ErrorFallback />
   },
   {
     path: "/wallet",
@@ -172,6 +193,7 @@ const UserRoutes = [
         <WalletPage />
       </RequireAuth>
     ),
+    errorElement: <ErrorFallback />
   },
   {
     path: "/about-us",
@@ -180,6 +202,7 @@ const UserRoutes = [
         <AboutUsPage/>
       </RequireAuth>
     ),
+    errorElement: <ErrorFallback />
   },
 ];
 

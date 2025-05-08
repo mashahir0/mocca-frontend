@@ -190,7 +190,7 @@ export default function Dashboard() {
                 Total Amount
               </h3>
               <p className="text-xl font-bold text-green-600">
-                ₹{salesData.overallOrderAmount}
+                ₹{salesData.overallOrderAmount.toFixed(2)}
               </p>
             </div>
             <div className="p-4 bg-gray-50 rounded-lg shadow-sm">
@@ -198,7 +198,7 @@ export default function Dashboard() {
                 Total Discounts
               </h3>
               <p className="text-xl font-bold text-red-600">
-                ₹{salesData.overallDiscount}
+                ₹{salesData.overallDiscount.toFixed(2)}
               </p>
             </div>
           </div>

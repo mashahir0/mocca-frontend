@@ -1,3 +1,4 @@
+import ErrorFallback from "../components/common/ErrorFallback";
 import AdminAddProductPage from "../pages/admin/AdminAddProductPage";
 import AdminDashPage from "../pages/admin/AdminDashPage";
 import AdminEditProductPage from "../pages/admin/AdminEditProductPage";
@@ -18,6 +19,7 @@ const adminRoutes = [
         <AdminLoginPage />
       </ReqAdminLoginAuth>
     ),
+    errorElement: <ErrorFallback />
   },
   {
     path: "/admin/dashboard",
@@ -26,15 +28,16 @@ const adminRoutes = [
         <AdminDashPage />
       </ReqAdminAuth>
     ),
+    errorElement: <ErrorFallback />
   },
   {
     path: "/admin/userlist",
     element: (
       <ReqAdminAuth>
-        {" "}
         <AdminUserListPage />
       </ReqAdminAuth>
     ),
+    errorElement: <ErrorFallback />
   },
   {
     path: "/admin/productlist",
@@ -43,6 +46,7 @@ const adminRoutes = [
         <AdminProductListPage />
       </ReqAdminAuth>
     ),
+    errorElement: <ErrorFallback />
   },
   {
     path: "/admin/addproduct",
@@ -51,6 +55,7 @@ const adminRoutes = [
         <AdminAddProductPage />
       </ReqAdminAuth>
     ),
+    errorElement: <ErrorFallback />
   },
   {
     path: "/admin/edit-product/:id",
@@ -59,6 +64,7 @@ const adminRoutes = [
         <AdminEditProductPage />
       </ReqAdminAuth>
     ),
+    errorElement: <ErrorFallback />
   },
   {
     path: "/admin/category",
@@ -67,6 +73,7 @@ const adminRoutes = [
         <CategoryManagmentPage />
       </ReqAdminAuth>
     ),
+    errorElement: <ErrorFallback />
   },
   {
     path: "/admin/orders",
@@ -75,6 +82,7 @@ const adminRoutes = [
         <ListOrderPage />
       </ReqAdminAuth>
     ),
+    errorElement: <ErrorFallback />
   },
   {
     path: "/admin/coupon",
@@ -83,6 +91,7 @@ const adminRoutes = [
         <CuponPage />
       </ReqAdminAuth>
     ),
+    errorElement: <ErrorFallback />
   },
 ];
 

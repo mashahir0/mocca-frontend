@@ -9,7 +9,7 @@ function Error({error}) {
       {/* Error Message */}
       <h1 className="text-3xl font-bold text-gray-800 mt-4">Oops! Something went wrong.</h1>
       {error &&    <p className="text-gray-500 mt-2 text-center">
-        {error}
+        {error?.message}
       </p>}
       <p className="text-gray-500 mt-2 text-center">
         We're having some trouble processing your request. <br />

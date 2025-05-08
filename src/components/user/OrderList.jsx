@@ -4,6 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useSelector } from "react-redux";
 import axios from "../../services/api/userApi";
 import Loading from "../common/Loading";
+import Error from '../common/Error'
 
 export default function OrdersList() {
   const { user } = useSelector((state) => state.user);
@@ -28,7 +29,7 @@ export default function OrdersList() {
   }
 
   if (isError) {
-    return <Error error={isError} />;
+    return <Error/>;
   }
 
   if (!orders.length) {

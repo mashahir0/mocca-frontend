@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Initialize axios instance
 const api = axios.create({
-  baseURL: `${import.meta.env.VITE_BACKENDURL}/user`,
+  baseURL:`${import.meta.env.VITE_BACKENDURL}/user`,
 });
 
 // Helper functions to get tokens
@@ -36,7 +36,7 @@ api.interceptors.response.use(
       try {
         // Request new access token using refresh token
         const response = await axios.post(
-          "http://localhost:3000/user/refresh-token",
+          `${import.meta.env.VITE_BACKENDURL}/user/refresh-token`,
           { refreshToken }
         );
 
