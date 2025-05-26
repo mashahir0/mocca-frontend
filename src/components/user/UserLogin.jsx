@@ -88,27 +88,7 @@ export default function LoginForm() {
     }));
   };
 
-  // const handleGoogleSuccess = async (response) => {
-  //   const { credential } = response // credential is the ID token returned by Google
-  //   try {
-  //     // Send the Google ID token to the backend for validation and user data retrieval
-  //     const googleUser = await axios.post('/google-login', { tokenId: credential })
 
-  //     const { accessToken, refreshToken, user } = googleUser.data
-  //     localStorage.setItem('accessToken', accessToken)
-  //     localStorage.setItem('refreshToken', refreshToken)
-
-  //     dispatch(setUser({
-  //       user,
-  //       accessToken,
-  //       refreshToken
-  //     }))
-  //     navigate('/home')
-  //   } catch (error) {
-  //     console.error('Google login error:', error)
-  //     toast.error('Failed to login with Google.')
-  //   }
-  // }
 
   const handleGoogleSuccess = async (response) => {
     const { credential } = response;
