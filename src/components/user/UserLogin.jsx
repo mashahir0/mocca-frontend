@@ -63,7 +63,7 @@ export default function LoginForm() {
         if (error.response) {
           console.error("Response error:", error.response.data);
           alert(
-            `Login failed: ${error.response.data.message || "Unknown error"}`
+            `Login failed: invalid credentials"}`
           );
         } else if (error.request) {
           console.error("Request error:", error.request);
