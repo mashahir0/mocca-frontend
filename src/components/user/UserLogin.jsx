@@ -56,21 +56,21 @@ export default function LoginForm() {
           );
           navigate("/home");
         } else {
-          alert("Login failed");
+          toast.error("Login failed");
         }
       } catch (error) {
         console.error("Error details:", error);
         if (error.response) {
           console.error("Response error:", error.response.data);
-          alert(
-            `Login failed: invalid credentials"}`
+          toast.error(
+            `Login failed: invalid credentials`
           );
         } else if (error.request) {
           console.error("Request error:", error.request);
-          alert("No response from server");
+          toast.error("No response from server");
         } else {
           console.error("Error message:", error.message);
-          alert("An unexpected error occurred");
+          toast.error("An unexpected error occurred");
         }
       }
     }
